@@ -14,7 +14,7 @@ intstate = 0
 column = 3 #
 row_size = 17 #
 steps = 1 #
-table1 = doc.tables[2]
+table1 = doc.tables[2] #
 
 while stop != row_size:
     if curr_stop == stop:
@@ -28,7 +28,5 @@ while stop != row_size:
     for row in range(start, stop):
         table1.cell(row, column).text = num
         curr_stop += 1
-        print(curr_stop)
     
-print(f"{start} : {stop} : {intstate} : {num}")
-doc.save(dl+"newtables.docx")    
+doc.save(dl+file_name)    
