@@ -5,5 +5,5 @@ Python script for table processing in a word docx
 currently only working with rows but columns can be hardcoded
 
 ### Pre-requisites
-- python-docx Library
-    -`pip install python-docx`
+- python-docx library
+    - How to install
