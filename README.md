@@ -6,4 +6,4 @@ currently only working with rows but columns can be hardcoded
 
 ### Pre-requisites
 - python-docx library
-    - How to install
+    - How to install: `pip install python-docx`
