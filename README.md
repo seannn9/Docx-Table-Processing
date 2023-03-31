@@ -8,4 +8,4 @@ currently only working with rows but columns can be hardcoded
 - python-docx library
     - How to install: 
         - Windows: `pip install python-docx`
-        - MacOS: `pip3 install python-docx`
+        - MacOS/Linux: `pip3 install python-docx`
