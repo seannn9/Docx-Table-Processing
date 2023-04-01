@@ -11,10 +11,10 @@ stop = 2 # add 1 to the actual stopping point
 curr_stop = 1
 num = "0"
 intstate = 0
-column = 3 # starts with 0
+column = 3 # specify which column to edit, starting with 0
 row_size = 17 # add 1 to the actual column size
 steps = 1 #
-table1 = doc.tables[2] # starts with 0
+table1 = doc.tables[2] # specify what table to edit, starting with 0
 
 while stop != row_size:
     if curr_stop == stop:
