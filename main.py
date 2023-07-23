@@ -11,16 +11,14 @@ doc = docx.Document(dl+file_name)
 # can modify if necessary
 start = 1 # specify which row to start with
 curr_stop = 1
-num = "0" # element to place inside table cell
 intstate = 0
 
 # variables to modify
-table1 = doc.tables[10] # specify what table to edit, starting with 0
-column_size = 17
+table1 = doc.tables[0] # specify what table to edit, starting with 0
 column = 0 # specify which column to edit, starting with 0
-steps = 8 # how many iterations before changing num
-stop = 9 # add 1 to the actual stopping point (steps + 1)
-
+column_size = 0 # add 1 to the actual column size
+stop = 2 # add 1 to the actual stopping point (steps + 1)
+steps = 1 # how many iterations before changing num
 
 while stop != column_size:
     if curr_stop == stop:
