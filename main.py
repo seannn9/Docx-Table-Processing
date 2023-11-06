@@ -1,9 +1,10 @@
 import docx
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 import os
 
 # Edit docx tables that contains patterns
 
-file_name = "" # file to modify
+file_name = "condition1.docx" # file to modify
 path = "Downloads\\" # change for different file location
 dl = os.path.join(os.path.expanduser("~"), path)
 doc = docx.Document(dl+file_name)
@@ -15,10 +16,10 @@ intstate = 0
 
 # variables to modify
 table1 = doc.tables[0] # specify what table to edit, starting with 0
-column = 0 # specify which column to edit, starting with 0
-column_size = 0 # add 1 to the actual column size
-stop = 2 # add 1 to the actual stopping point (steps + 1)
+column = 5 # specify which column to edit, starting with 0
+column_size = 33 # actual column size
 steps = 1 # how many iterations before changing num
+stop = steps + 1 
 
 while stop != column_size:
     if curr_stop == stop:
@@ -30,7 +31,10 @@ while stop != column_size:
     else:
         num = "1" 
     for row in range(start, stop):
-        table1.cell(row, column).text = num
+        cell = table1.cell(row, column)
+        cell.text = num
+        for p in cell.paragraphs:
+            p.alignment = 1
         curr_stop += 1
     
 doc.save(dl+file_name)    
